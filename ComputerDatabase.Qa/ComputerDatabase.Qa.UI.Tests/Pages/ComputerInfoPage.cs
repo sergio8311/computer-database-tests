@@ -2,6 +2,7 @@
 
 namespace ComputerDatabase.Qa.UI.Tests.Pages
 {
+    //Parent class for Add/Edit Computer pages as they share the same view
     public class ComputerInfoPage : BasePage
     {
         #region Locators
@@ -17,6 +18,11 @@ namespace ComputerDatabase.Qa.UI.Tests.Pages
         public ComputerInfoPage(IWebDriver webDriver) : base(webDriver)
         {
             _webDriver = webDriver;
+        }
+
+        public void SelectCompany(string companyName)
+        {
+            CompanyDropdown.SendKeys(companyName);
         }
     }
 }

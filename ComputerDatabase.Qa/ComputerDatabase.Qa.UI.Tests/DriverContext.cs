@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using ComputerDatabase.Qa.Core.Configuration;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using System;
@@ -19,9 +20,10 @@ namespace ComputerDatabase.Qa.UI.Tests
                 process.Kill();
         }
 
-        public static IWebDriver GetDriver(string browser = null, bool isRemote = false)
+        public static IWebDriver GetDriver(string browser = null)
         {
-            var browserName = browser ?? Configuration.Configuration.GetConfiguration<string>("browser");
+            //read from config file browser name
+            var browserName = browser ?? Configuration.GetConfiguration<string>("browser");
             try
             {
                 if (browserName.Equals("Edge", StringComparison.InvariantCultureIgnoreCase))
@@ -31,8 +33,10 @@ namespace ComputerDatabase.Qa.UI.Tests
                     return atWebDriver;
                 }
 
+                //Crhome driver options
                 var options = new ChromeOptions();
-                var isHeadless = Configuration.Configuration.GetConfiguration<bool>("Headless");
+                //Tests could be run in a headless mode
+                var isHeadless = Configuration.GetConfiguration<bool>("Headless");
                 if (isHeadless)
                     options.AddArgument("--headless");
 

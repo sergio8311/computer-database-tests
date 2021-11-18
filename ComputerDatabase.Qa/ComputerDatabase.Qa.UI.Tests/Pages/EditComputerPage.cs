@@ -1,7 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ComputerDatabase.Qa.UI.Tests.Pages
 {
@@ -16,6 +13,18 @@ namespace ComputerDatabase.Qa.UI.Tests.Pages
         public EditComputerPage(IWebDriver webDriver) : base(webDriver)
         {
             _webDriver = webDriver;
+        }
+
+        public ComputersPage SaveChanges()
+        {
+            SaveThisComputer.Click();
+            return new ComputersPage(_webDriver);
+        }
+
+        public ComputersPage DeleteComputer()
+        {
+            DeleteThisComputer.Click();
+            return new ComputersPage(_webDriver);
         }
     }
 }

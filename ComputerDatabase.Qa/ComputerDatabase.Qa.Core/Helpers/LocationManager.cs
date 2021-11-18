@@ -4,6 +4,7 @@ using System.Reflection;
 
 namespace ComputerDatabase.Qa.Core.Helpers
 {
+    //Helper method to get folder for saving Screenshots
     public static class LocationManager
     {
         private const string ScreenShotFolder = "Screenshots";

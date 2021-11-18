@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace ComputerDatabase.Qa.Core.Helpers
 {
+    //Helper methods to get random string or int values
     public static class CommonFunctions
     {
         private static Random random = new Random();

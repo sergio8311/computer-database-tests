@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 
-namespace ComputerDatabase.Qa.UI.Tests.Configuration
+namespace ComputerDatabase.Qa.Core.Configuration
 {
+    //Created to read data from config file
     public sealed class Configuration
     {
         public static T GetConfiguration<T>(string key)

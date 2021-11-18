@@ -3,6 +3,7 @@ using System.Globalization;
 
 namespace ComputerDatabase.Qa.Core.Helpers
 {
+    //Helps to get and convert dates
     public class DateTimeHelper
     {
         public static DateTime GetCurrentDateTime()

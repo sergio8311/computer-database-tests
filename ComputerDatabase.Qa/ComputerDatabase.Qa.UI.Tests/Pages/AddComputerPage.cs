@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 
 namespace ComputerDatabase.Qa.UI.Tests.Pages
 {
+    //The Add Computer page. Inherited from ComputerInfoPage as it shares the same view as Edit Computer page
     public class AddComputerPage : ComputerInfoPage
     {
         #region Locators

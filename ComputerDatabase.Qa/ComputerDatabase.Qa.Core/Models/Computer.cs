@@ -2,6 +2,7 @@
 
 namespace ComputerDatabase.Qa.Core.Models
 {
+    //Model of Computer object. Helps to build new objects, map and assert
     public class Computer
     {
         public string ComputerName { get; set; }

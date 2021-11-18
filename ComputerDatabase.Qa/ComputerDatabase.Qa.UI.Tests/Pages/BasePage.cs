@@ -1,11 +1,9 @@
 ﻿using ComputerDatabase.Qa.UI.Tests.Interfaces;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ComputerDatabase.Qa.UI.Tests.Pages
 {
+    //Base page object where were implemented common functionality for the derived pages
     public class BasePage : IBasePage
     {
         #region Locators
